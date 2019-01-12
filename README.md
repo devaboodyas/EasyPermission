@@ -15,20 +15,20 @@ EasyPermission allows you to request a specific permission without adding any va
 
                 PermissionManager permissionManager = PermissionManager.initilize(activity);
 
-                permissionManager.requestPermission(Manifest.permission.CAMERA, new OnRequestPermissionResultListener() {
-                    @Override
-                    public void onGranted() {
-                        Toast.makeText(getApplicationContext(), "REQUEST : GRANTED", Toast.LENGTH_LONG).show();
-                    }
+                String targetPermission=Manifest.permission.CAMERA;
+       permissionManager.requestPermission(targetPermission, new OnRequestPermissionResultListener() {
+          @Override
+        public void onGranted() {
+         Toast.makeText(getApplicationContext(), "REQUEST : GRANTED", Toast.LENGTH_LONG).show();
+               }
 
-                    @Override
-                    public void onDenied() {
-                        Toast.makeText(getApplicationContext(), "REQUEST: DENIED", Toast.LENGTH_LONG).show();
-                    }
-
-                    @Override
-                    public void onDontAskAgain() {
-                        Toast.makeText(getApplicationContext(), "REQUEST: DON NOT ASK AGAIN", Toast.LENGTH_LONG).show();
-                    }
+          @Override
+        public void onDenied() {
+          Toast.makeText(getApplicationContext(), "REQUEST: DENIED", Toast.LENGTH_LONG).show();
+               }
+           @Override
+          public void onDontAskAgain() {
+           Toast.makeText(getApplicationContext(), "REQUEST: DON NOT ASK AGAIN", Toast.LENGTH_LONG).show();
+                   }
                 });
 
