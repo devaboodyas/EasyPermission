@@ -65,5 +65,6 @@ EasyPermission allows you to request a specific permission without adding any va
         }
 
 * if there is any bug please email me with it and screenshot .Thanks
-My Email : devaboodyas@gmail.com 
+ 
+  My Email : devaboodyas@gmail.com 
 
