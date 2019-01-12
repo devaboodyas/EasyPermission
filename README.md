@@ -50,3 +50,18 @@ EasyPermission allows you to request a specific permission without adding any va
                    }
                 });
 
+
+* Note: 
+
+- You will need to override the onRequestPermissionsResult function 
+
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        permissionManager.onRequestPermissionsResult(requestCode,permissions,grantResults);
+    }
+
+
+
