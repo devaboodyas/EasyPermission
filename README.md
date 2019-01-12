@@ -13,9 +13,8 @@ EasyPermission allows you to request a specific permission without adding any va
 * Usage:
 
 
-                PermissionManager permissionManager = PermissionManager.initilize(activity);
-
-                String targetPermission=Manifest.permission.CAMERA;
+       PermissionManager permissionManager = PermissionManager.initilize(activity);
+       String targetPermission=Manifest.permission.CAMERA;
        permissionManager.requestPermission(targetPermission, new OnRequestPermissionResultListener() {
           @Override
         public void onGranted() {
